@@ -1,0 +1,22 @@
+<html>
+<body>
+<center>
+<a href = "{% url 'add' %}"style = "margin-top:250px;">Add New Record</a>
+<table border = 5 style = "margin-top:250px;">
+<tr>
+<th>Name</th>
+<th>Address</th>
+<th>Action</th>
+
+</tr>
+{% for item in details %}
+<tr>
+<td>{{item.name}}</td>
+<td>{{item.address}}</td>
+<td><a href = "edit/{{item.id}}">Edit</a>   <a href = "delete/{{item.id}}">Delete</a></td>
+</tr>
+{% endfor %}
+</table>
+</center>
+</body>
+</html>
